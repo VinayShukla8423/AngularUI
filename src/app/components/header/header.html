@@ -1,0 +1,23 @@
+<header class="header">
+  <div class="container">
+    
+    <!-- Logo -->
+    <div class="logo">MyApp</div>
+
+    <!-- Navigation -->
+ <nav class="nav">
+  <a routerLink="/home" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a>
+  <a routerLink="/about" routerLinkActive="active">About</a>
+  <a routerLink="/contact" routerLinkActive="active">Contact</a>
+  <a routerLink="/product" routerLinkActive="active">Product</a>
+
+</nav>
+
+    <!-- Right Side (Buttons) -->
+    <div class="actions">
+      <button class="login-btn" routerLink="/login">Login</button>
+      <button class="signup-btn" routerLink="/signup">Sign Up</button>
+    </div>
+
+  </div>
+</header>

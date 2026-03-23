@@ -1,0 +1,33 @@
+<!-- <h2>Login</h2>
+
+<input [(ngModel)]="user.email" placeholder="Email">
+<br><br>
+
+<input [(ngModel)]="user.password" type="password" placeholder="Password">
+<br><br>
+
+<button (click)="login()">Login</button> -->
+
+<div class="login-wrapper">
+  <div class="login-card">
+
+    <h2>Welcome Back 👋</h2>
+    <p class="subtitle">Login to your account</p>
+
+    <div class="input-group">
+      <input [(ngModel)]="user.email" placeholder="Email">
+    </div>
+
+    <div class="input-group">
+      <input [(ngModel)]="user.password" type="password" placeholder="Password">
+    </div>
+
+    <button (click)="login()">Login</button>
+
+    <div class="extra-links">
+      <a href="#">Forgot Password?</a>
+      <p>Don't have an account? <span>Sign up</span></p>
+    </div>
+
+  </div>
+</div>

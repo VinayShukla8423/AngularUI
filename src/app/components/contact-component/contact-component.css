@@ -1,0 +1,105 @@
+.contact-container {
+  min-height: 100vh;
+  background: url('../Banner/Contact.jpg') no-repeat center/cover;
+}
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: #000; /* ya jo bhi tumhara background ho */
+  overflow-x: hidden; /* horizontal scroll hataane ke liye */
+}
+.about-container, .contact-container, .overlay {
+  min-height: 100vh; /* ya height: 100vh; */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+footer {
+  margin: 0;
+  padding: 20px;
+  background: #0b1226;
+  color: #ccc;
+  text-align: center;
+}
+.overlay {
+  background: rgba(0,0,0,0.7);
+  padding: 50px 20px;
+}
+/* Same as previous CSS, add this part at the end */
+.map-container {
+  margin-top: 20px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+.contact-wrapper {
+  max-width: 1100px;
+  margin: auto;
+  color: #fff;
+}
+
+.main-title {
+  text-align: center;
+  font-size: 40px;
+  margin-bottom: 40px;
+}
+
+.contact-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: space-between;
+}
+
+.contact-form, .contact-info {
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(10px);
+  padding: 30px;
+  border-radius: 12px;
+  flex: 1;
+  min-width: 300px;
+  transition: 0.3s;
+}
+
+.contact-form:hover, .contact-info:hover {
+  transform: translateY(-5px);
+  background: rgba(255,255,255,0.2);
+}
+
+.contact-form h2, .contact-info h2 {
+  color: #00d4ff;
+  margin-bottom: 20px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  font-size: 14px;
+}
+
+.contact-form button {
+  width: 100%;
+  padding: 12px;
+  background: #00d4ff;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.contact-form button:hover {
+  background: #009fcc;
+}
+
+.contact-info p {
+  font-size: 16px;
+  line-height: 1.6;
+}
