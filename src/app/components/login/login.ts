@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { Auth } from '../../services/auth';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-login',
   standalone: true,
@@ -11,12 +11,14 @@ import { Auth } from '../../services/auth';
 })
 export class Login {
    user = { email: '', password: '' };
-constructor(private auth: Auth) {}
+ 
+constructor(private auth: Auth,private router: Router) {}
  login() {
     this.auth.login(this.user).subscribe({
       next: (res) => {
         this.auth.saveToken(res.token);
         alert('Login Success');
+        this.router.navigate(['/dashboard']);
       },
       error: () => {
         alert('Invalid Credentials');

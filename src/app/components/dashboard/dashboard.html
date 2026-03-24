@@ -1,0 +1,12 @@
+<h3 *ngIf="user">
+  Welcome, {{ user.name || user.email }}
+</h3>
+<button class="logout-btn"  (click)="logout()">Logout</button>
+
+<hr>
+
+<h3>Products</h3>
+
+<div *ngFor="let p of products">
+  <p>{{ p.name }} - ₹{{ p.price }}</p>
+</div>

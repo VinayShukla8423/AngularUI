@@ -5,7 +5,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root',
 })
 export class Auth {
-  api = 'https://localhost:7269/api/auth/login';
+  api = 'https://localhost:7030/api/auth/login';
   constructor(private http: HttpClient) {}
 
   login(data: any) {
@@ -13,10 +13,15 @@ export class Auth {
   }
 
   saveToken(token: string) {
+    debugger
     localStorage.setItem('token', token);
   }
 
   getToken() {
     return localStorage.getItem('token');
   }
+  logout() {
+  localStorage.removeItem('token');
+  localStorage.removeItem('user');
+}
 }
