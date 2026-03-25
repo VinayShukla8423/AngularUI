@@ -1,6 +1,8 @@
 <h3 *ngIf="user">
-  Welcome, {{ user.name || user.email }}
-</h3>
+ <h2>Welcome to Dashboard 🎉</h2>
+
+<p><b>Name:</b> {{user.name}}</p>
+<p><b>Email:</b> {{user.email}}</p>
 <button class="logout-btn"  (click)="logout()">Logout</button>
 
 <hr>

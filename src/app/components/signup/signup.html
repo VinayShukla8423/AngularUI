@@ -2,25 +2,25 @@
   <div class="signup-card">
     <h2>Create Account</h2>
 
-    <form>
+    <!-- <form (ngSubmit)="register()" > -->
+      <form #signupForm="ngForm" (ngSubmit)="register(signupForm)">
       <div class="input-group">
-        <input type="text" placeholder="Full Name" required />
+       <input type="text" name="name" [(ngModel)]="user.name" placeholder="Full Name" required />
       </div>
 
       <div class="input-group">
-        <input type="email" placeholder="Email Address" required />
+         <input type="email" name="email" [(ngModel)]="user.email" placeholder="Email Address" required />
       </div>
 
       <div class="input-group">
-        <input type="password" placeholder="Password" required />
-      </div>
+       <input type="password" name="password" [(ngModel)]="user.password" placeholder="Password" required />
+  </div>
 
       <div class="input-group">
-        <input type="password" placeholder="Confirm Password" required />
+      <input type="password" name="confirmPassword" [(ngModel)]="confirmPassword" placeholder="Confirm Password" required />
       </div>
 
-      <button type="submit">Sign Up</button>
-
+     <button type="submit">Register</button>
       <p class="login-link">
         Already have an account? <a href="#">Login</a>
       </p>

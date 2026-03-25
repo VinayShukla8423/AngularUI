@@ -17,6 +17,8 @@ constructor(private auth: Auth,private router: Router) {}
     this.auth.login(this.user).subscribe({
       next: (res) => {
         this.auth.saveToken(res.token);
+        this.auth.saveToken(res)
+        // this.auth.saveUser(res);
         alert('Login Success');
         this.router.navigate(['/dashboard']);
       },

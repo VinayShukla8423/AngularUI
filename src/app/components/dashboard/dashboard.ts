@@ -12,7 +12,9 @@ import { Auth } from '../../services/auth';
 export class Dashboard implements OnInit{
  user: any;
   products: any[] = [];
- constructor(private auth: Auth,private router:Router) {}
+ constructor(private auth: Auth,private router:Router) {
+  this.user = this.auth.getToken();
+ }
   ngOnInit() {
     // user data lo
     const data = localStorage.getItem('user');
